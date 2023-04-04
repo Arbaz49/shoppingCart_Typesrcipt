@@ -4,7 +4,8 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import Products from './components/Products';
 import Footer from './components/Footer';
-
+import { BrowserRouter,Routes, Route} from 'react-router-dom'
+import CheckOutPage from './Pages/CheckOutPage';
 function App() {
   const [users,setusers]=useState<[]>([])
   useEffect(()=>{
@@ -17,11 +18,25 @@ getdata();
   },[])
   return (
   <>
+  {/* <Navbar/>
+  <Products products={users} cartpage={false}/>
+  <Footer/> */}
+
+
+  <BrowserRouter>
+  <Routes>
+  <Route  path='/' element={(<>
   <Navbar/>
   <Products products={users} cartpage={false}/>
-  <Footer/>
+  <Footer/></>)} />
+  <Route  path='cart' element={<CheckOutPage/>} />
+    
+  </Routes>
+</BrowserRouter>
   </>
   );
 }
+
+
 
 export default App;

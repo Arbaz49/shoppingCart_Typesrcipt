@@ -1,26 +1,38 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { type } from "os";
+
+type Product = {
+  category: string;
+  description: string;
+  id: number;
+  image: string;
+  price: number;
+  title:string;
+};
+interface initialState {
+  cart: Product[];
+}
+const initialState: initialState = {
+  cart: [],
+};
 
 export const cartSlice = createSlice({
-  name: 'cart',
-  initialState: {
-    cart: [],
-  },
+  name: "cart",
+  initialState,
   reducers: {
-    addToCart: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-    //   state.value += 1
+    addToCart: (state, action: PayloadAction<Product>) => {
+      state.cart.push(action.payload);
+      // console.log(action.payload)
+      // [...state.cart,action.payload]
+      // console.log(state.cart)
     },
-    removeFromCart: (state) => {
-    //   state.value -= 1
-    }
-   
+    removeFromCart: (state, action:PayloadAction<number>) => {
+ state.cart=state.cart.filter((ele)=>ele.id!==action.payload);
+    },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { addToCart,removeFromCart } = cartSlice.actions
+export const { addToCart, removeFromCart } = cartSlice.actions;
 
-export default cartSlice.reducer
+export default cartSlice.reducer;
