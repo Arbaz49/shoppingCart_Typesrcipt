@@ -6,7 +6,7 @@ import Products from './components/Products';
 import Footer from './components/Footer';
 import { BrowserRouter,Routes, Route} from 'react-router-dom'
 import CheckOutPage from './Pages/CheckOutPage';
-import { ToastContainer,toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import Payment from './Pages/Payment';
 function App() {
   const [users,setusers]=useState<[]>([])

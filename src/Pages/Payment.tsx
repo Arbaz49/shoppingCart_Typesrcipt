@@ -37,13 +37,13 @@ theme="dark"
             <div className="px-2">
                 <label  className="flex items-center cursor-pointer">
                     <input type="radio" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type1" checked/>
-                    <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" className="h-8 ml-3"/>
+                    <img src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png" className="h-8 ml-3" alt='ss'/>
                 </label>
             </div>
             <div className="px-2">
                 <label  className="flex items-center cursor-pointer">
                     <input type="radio" className="form-radio h-5 w-5 text-indigo-500" name="type" id="type2"/>
-                    <img src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" className="h-8 ml-3"/>
+                    <img alt='g' src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png" className="h-8 ml-3"/>
                 </label>
             </div>
         </div>

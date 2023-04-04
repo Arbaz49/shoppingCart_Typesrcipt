@@ -1,5 +1,4 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { type } from "os";
 
 type Product = {
   category: string;
@@ -9,10 +8,10 @@ type Product = {
   price: number;
   title:string;
 };
-interface initialState {
+interface State {
   cart: Product[];
 }
-const initialState: initialState = {
+const initialState: State = {
   cart: [],
 };
 

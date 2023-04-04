@@ -1,7 +1,7 @@
 import React from 'react';
 import {addToCart,removeFromCart} from "../store/slice"
 import { useDispatch } from 'react-redux';
-import { ToastContainer,toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 interface props{
   products:any,
