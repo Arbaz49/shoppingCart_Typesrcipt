@@ -22,9 +22,7 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action: PayloadAction<Product>) => {
       state.cart.push(action.payload);
-      // console.log(action.payload)
-      // [...state.cart,action.payload]
-      // console.log(state.cart)
+     
     },
     removeFromCart: (state, action:PayloadAction<number>) => {
  state.cart=state.cart.filter((ele)=>ele.id!==action.payload);

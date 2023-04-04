@@ -10,7 +10,7 @@ const CheckOutPage = () => {
   const [users,setusers]=useState<any>([])
 useEffect(()=>{
 setusers(cart)
-},[])
+},[cart])
   return (
     <div>
       <Navbar/>

@@ -1,6 +1,8 @@
 import React from 'react';
 import {addToCart,removeFromCart} from "../store/slice"
 import { useDispatch } from 'react-redux';
+import { ToastContainer,toast } from 'react-toastify';
+
 interface props{
   products:any,
   cartpage?:boolean
@@ -12,12 +14,18 @@ const Products= ({products,cartpage}:props) => {
   const  addProduct=(product:any)=>{
     dispatch(addToCart(product));
 console.log(product)
+toast.success("added successfully")
+
   }
 
   const  removeProduct=(id:number)=>{
     dispatch(removeFromCart(id));
+toast.error("removed from cart successfully")
+
   }
   return (
+    <>
+
     <section className="text-gray-600 body-font">
       <h1 className='text-center text-black'>Products</h1>
     <div className="container px-5 py-24 mx-auto">
@@ -45,7 +53,9 @@ console.log(product)
        
       </div>
     </div>
+
   </section>
+        </>
   )
 }
 
