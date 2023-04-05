@@ -26,7 +26,7 @@ toast.error("removed from cart successfully")
   return (
     <>
 
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font pt-20">
       <h1 className='text-center text-black'>Products</h1>
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-wrap -m-4">

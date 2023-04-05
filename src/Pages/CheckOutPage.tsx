@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Products from '../components/Products'
 import { RootState } from '../store/store'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const CheckOutPage = () => {
   const cart=useSelector((state:RootState)=>state.cart.cart)
@@ -15,8 +16,11 @@ setusers(cart)
     <div>
       <Navbar/>
       <Products products={users} cartpage={true}/>
-      <h2 className='text-center'>total-{users.reduce((acc:any,it:any)=>acc+it.price,0)}</h2>
-
+      <div className='flex justify-center gap-3'>
+      <h1 className='text-center text-3xl'>total-{users.reduce((acc:any,it:any)=>acc+it.price,0)}</h1>
+        
+<Link to={"/payment"} className='text-xl text-white bg-lime-700 rounded p-1'>Payment</Link>
+      </div>
       <Footer/>
     </div>
   )

@@ -6,7 +6,7 @@ import {AiOutlineShoppingCart} from "react-icons/ai"
 const Navbar = () => {
   const cart=useSelector((state:RootState)=>state.cart.cart)
   return (
-    <header className="sticky body-font bg-slate-900 text-white">
+    <header className="fixed mt-0 body-font z-50  bg-slate-900 text-white" style={{width:"100%",marginTop:"0px"}}>
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <span className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
